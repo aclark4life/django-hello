@@ -1,3 +1,5 @@
-from tmp5qNIgI import urls
-DEBUG=True
-ROOT_URLCONF=urls
+from hello import urls
+
+
+DEBUG = True
+ROOT_URLCONF = urls
