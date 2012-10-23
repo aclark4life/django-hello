@@ -3,6 +3,19 @@ Hello Django
 
 This is what **Hello World** in Django looks like to me.
 
+setup.py::
+
+    from setuptools import setup
+
+    setup(
+        name='hello',
+    )
+
+requirements.txt::
+
+    Django==1.4.1
+    -e .
+
 settings.py::
 
     from hello import urls
@@ -19,11 +32,13 @@ urls.py::
         '',
         (r'', 'hello.views.index'),
     )
-    from django.http import HttpResponse
-    import datetime
 
 
 views.py::
+
+    from django.http import HttpResponse
+    import datetime
+
 
     # Based on https://docs.djangoproject.com/en/1.4/topics/http/views/
     def index(request):
@@ -46,4 +61,3 @@ To install::
     $ virtualenv .
     $ bin/pip install -r requirements.txt
     $ bin/django-admin.py runserver --settings=hello.settings
-
