@@ -1,7 +1,7 @@
 Hello Django
 ============
 
-This is what "Hello World" in Django looks like to me.
+This is what **Hello World** in Django looks like to me.
 
 settings.py::
 
@@ -35,3 +35,15 @@ views.py::
         now = datetime.datetime.now()
         html = "<html><body>It is now %s.</body></html>" % now
         return HttpResponse(html)
+
+Installation
+------------
+
+To install::
+
+    $ git clone this-repo
+    $ cd this-repo
+    $ virtualenv .
+    $ bin/pip install -r requirements.txt
+    $ bin/django-admin.py runserver --settings=hello.settings
+
